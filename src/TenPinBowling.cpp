@@ -16,10 +16,6 @@ TenPinBowling::~TenPinBowling()
 bool TenPinBowling::loadInputFiles()
 {
     std::vector<Player> game{};
-    std::string playerName{};
-    std::vector<int> playerFrames{};
-    int score = 0;
-    enum Status status{Status::NotStarted};
 
     if (not fs::is_directory(input_dir_path_) or fs::is_empty(input_dir_path_)) {
         throw std::logic_error("There is lack of input files!");
